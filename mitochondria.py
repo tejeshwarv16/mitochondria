@@ -1,4 +1,3 @@
-from simple_unet_model_with_jacard import simple_unet_model_with_jacard   #Use normal unet model
 
 from keras.utils import normalize
 import os
