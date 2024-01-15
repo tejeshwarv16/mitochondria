@@ -162,9 +162,7 @@ plt.show()
 
 ##################################
 
-model = model_jacard  #Assign model to one of the models instead of changing the entire code for testing. 
-#model = model_standard  #Assign model to one of the models instead of changing the entire code for testing. 
-
+model = model_jacard 
 #IOU
 y_pred=model.predict(X_test)
 y_pred_thresholded = y_pred > 0.5
@@ -175,10 +173,6 @@ iou_score = np.sum(intersection) / np.sum(union)
 print("IoU socre is: ", iou_score)
 
 #######################################################################
-#Predict on a few images
-#model = get_model()
-#model.load_weights('mitochondria_with_jacard_50_plus_50_epochs.hdf5') #Trained for 50 epochs and then additional 100
-#model.load_weights('mitochondria_gpu_tf1.4.hdf5')  #Trained for 50 epochs
 
 test_img_number = random.randint(0, len(X_test))
 test_img = X_test[test_img_number]
